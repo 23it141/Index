@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background-color: #121212;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav .left img {
+            width: 100px;
+        }
+
+        nav .left p, nav .right p {
+            margin: 0 15px;
+            line-height: 40px;
+        }
+
+        nav .right {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .right button {
+            width: 100px;
+            height: 36px;
+            background-color: white;
+            color: black;
+            font-weight: 600;
+            border: none;
+            border-radius: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        nav .right button:hover {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .card {
+            background-image: url('https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1098,h_618/v1613521717/assets/7a/fd8982-6884-49b9-bb5f-28e6ff2cc0e8/original/Rider_Home_bg_tablet.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .card .main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .card .icon {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid gray;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card .icon .car {
+            text-align: center;
+        }
+
+        .card .icon .car i {
+            font-size: 24px;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .card input {
+            width: 100%;
+            height: 40px;
+            background-color: white;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .card .btn {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card .btn button {
+            width: 48%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .card .btn .fr {
+            background-color: black;
+            color: white;
+        }
+
+        .card .btn button:not(.fr) {
+            background-color: rgb(141, 137, 137);
+            color: white;
+        }
+
+        .head, .ride, .safe, .app, .footer {
+            padding: 20px;
+        }
+
+        .head h1, .app h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .ride {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .ride .uber {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .uber .auto {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .uber .auto img {
+            width: 84px;
+            margin-right: 15px;
+        }
+
+        .safe {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            
+        }
+
+        .safe .img {
+            text-align: center;
+            
+            
+        }
+
+        .safe .img img {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .app {
+            background-color: rgb(56, 56, 56);
+        }
+
+        .app .down {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .app .imgs {
+            text-align: center;
+        }
+
+        .app .imgs img {
+            width: 84px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer .list {
+            width: 22%;
+        }
+
+        .footer .list h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer .list p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <img src="https://download.logo.wine/logo/Uber/Uber-White-Logo.wine.png" alt="Uber Logo">
+            <p>Company</p>
+            <p>Safety</p>
+            <p>Help</p>
+        </div>
+        <div class="right">
+            <p>EN</p>
+            <p>Products</p>
+            <p>Login</p>
+            <button>Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="card">
+        <div class="main">
+            <div class="icon">
+                <div class="car">
+                    <i class="fa-solid fa-car"></i>
+                    <p>Ride</p>
+                </div>
+                <div class="car">
+                    <i class="fa-solid fa-wifi"></i>
+                    <p>Drive</p>
+                </div>
+            </div>
+            <h1>Request a ride now</h1>
+            <input type="text" placeholder="Enter a pickup Location">
+            <input type="text" placeholder="Enter Destination">
+            <div class="btn">
+                <button class="fr">Request Now</button>
+                <button>Schedule for Later</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ride">
+        <div class="uber">
+            <div class="auto">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1649914471/assets/89/8e4239-5e7d-4de7-bf71-00cc32d468db/original/Auto-150X150p4x.png" alt="Uber Moto">
+                <div>
+                    <h2>Uber Moto</h2>
+                    <p>Get affordable Uber rides with no haggling.</p>
+                </div>
+            </div>
+            <div class="auto">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1649914539/assets/86/82f8b3-e2e6-45f8-a8f7-fdc511f709e0/original/Moto-150X150p4x.png" alt="Uber Moto">
+                <div>
+                    <h2>Uber Moto</h2>
+                    <p>Get affordable Uber rides with no haggling.</p>
+                </div>
+            </div>
+        </div>
+        <div class="uber">
+            <div class="auto">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1630531077/assets/38/494083-cc23-4cf7-801c-0deed7d9ca55/original/uber-hourly.png" alt="Uber Hourly">
+                <div>
+                    <h2>Uber Hourly</h2>
+                    <p>Get a ride by the hour.</p>
+                </div>
+            </div>
+            <div class="auto">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1649914597/assets/f7/7f583f-447a-4cf7-8da6-6ad254f0a66b/original/Intercity-150X150p4x.png" alt="Uber Intercity">
+                <div>
+                    <h2>Uber Intercity</h2>
+                    <p>Travel between cities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="safe">
+        <div class="img">
+            <h2>Safety</h2>
+            <p>Ride with confidence knowing we’ve got your back.</p>
+        </div>
+    </div>
+
+    <div class="app">
+        <h1>Download the App</h1>
+        <div class="down">
+            <div class="imgs">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1618459257/assets/13/6bfdbd-cdb6-4221-92c1-cab1feaa39f3/original/Rider-App-logo.png" alt="App Store">
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1618459257/assets/13/6bfdbd-cdb6-4221-92c1-cab1feaa39f3/original/Rider-App-logo.png" alt="Google Play">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="list">
+            <h2>About</h2>
+            <p>Company</p>
+            <p>Careers</p>
+            <p>Blog</p>
+        </div>
+        <div class="list">
+            <h2>Products</h2>
+            <p>UberX</p>
+            <p>UberXL</p>
+            <p>Uber Pool</p>
+        </div>
+        <div class="list">
+            <h2>Support</h2>
+            <p>Help Center</p>
+            <p>Safety</p>
+            <p>Privacy</p>
+        </div>
+        <div class="list">
+            <h2>Legal</h2>
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+            <p>Cookies</p>
+        </div>
+    </div>
+</body>
+</html>
+
+           
